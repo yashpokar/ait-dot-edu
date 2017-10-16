@@ -1,0 +1,38 @@
+.carousel,
+.carousel__image {
+    display: block;
+}
+
+.carousel {
+    // height: $carousel-image-height;
+    z-index: 100;
+
+    &__image {
+        position: absolute;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, .3);
+        left: calc((100% - #{$carousel-image-width})/2);
+        transition: opacity .5s ease-in;
+        z-index: 200;
+
+        & + &__image {
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (min-width: $carousel-image-width) {
+    .carousel {
+        margin-top: $carousel-margin;
+    }
+}
+
+@media screen and (max-width: $carousel-image-width) {
+    .carousel {
+        margin-top: $carousel-margin-in-mobile;
+
+        &__image {
+            width: $carousel-image-width-in-mobile;
+            left: calc((100% - #{$carousel-image-width-in-mobile})/2);
+        }
+    }
+}

@@ -1,0 +1,124 @@
+// General
+$body-bg-color: #ecf0f1;
+$body-color: #333;
+$body-scrollbar-width: 5px;
+$body-scrollbar-color: #2980b9;
+
+
+
+
+
+// Navigation
+$navigation-height: 3.6rem;
+$navigation-bg-color: #245CBC;
+$navigation-text-color: #fafafa;
+$navigation-box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
+
+    // Navigation menu in small devices
+    $navigation-menu-width: 250px;
+    $navigation-menu-bg-color: #E91E63;
+
+    // Navigation link
+    $navigation-link-padding: 16px;
+    $navigation-link-underline-height: 3px;
+    $navigation-link-underline-color: #f39c12;
+
+    // in small devices
+    $navigation-link-bg-color-on-hover: #A71143;
+    $navigation-link-underline-color-on-hover: #fafafa;
+
+
+
+
+
+
+// Image carousel
+$carousel-image-width: 1007px;
+$carousel-image-height: 370px;
+$carousel-margin: 6rem;
+    // in Mobile
+    $carousel-image-width-in-mobile: 96%;
+    $carousel-margin-in-mobile: 1.4rem;
+
+
+
+
+// Illusion Of Typing text
+$illusion-of-typing-width: 100%;
+$illusion-of-typing-padding: 5em;
+$illusion-of-typing-top: -6em;
+$illusion-of-typing-bg-color: #f1c40f;
+
+// text inside illusion of typing
+$illusion-of-typing-text-margin-top: 5rem;
+
+    // in Small devices  
+    $illusion-of-typing-padding-in-tablet: 4em;  
+    $illusion-of-typing-text-padding-top-in-tablet: 3rem; 
+    $illusion-of-typing-top-in-tablet: -4em;
+
+        // in Small devices  
+        $illusion-of-typing-padding-in-mobile: 3em;  
+        $illusion-of-typing-text-padding-top-in-mobile: 2rem; 
+        $illusion-of-typing-top-in-mobile: -3em;
+
+
+
+
+
+// Events
+$event-container-bg-color: #27ae60;
+$event-container-text-color: #fafafa;
+$event-container-margin: 6rem;
+$event-container-padding-top-bottom: 4em;
+$event-container-padding-left-right: 1.4em;
+$event-container-padding: $event-container-padding-top-bottom $event-container-padding-left-right;
+$event-container-title-margin: 2rem;
+    // in Mobile
+    $event-container-margin-in-mobile: 1rem;
+
+$event-bg-color: #fff;
+$event-color: #888;
+$event-margin-left-right: 20px;
+$event-margin-top-bottom: 20px;
+$event-margin: $event-margin-top-bottom $event-margin-left-right;
+    // Might be for tablet
+    // $event-margin-left-right-in-tablet: 10px;
+    // $event-margin-top-bottom-in-tablet: 20px;
+    // $event-margin-in-tablet: $event-margin-top-bottom-in-tablet $event-margin-left-right-in-tablet;
+    
+        // in Small Devices
+        $event-margin-left-right-in-mobile: 16px;
+        $event-margin-top-bottom-in-mobile: 20px;
+        $event-margin-in-mobile: $event-margin-top-bottom-in-mobile $event-margin-left-right-in-mobile;
+        
+            // in Very Small devices
+            $event-margin-left-right-in-tiny-mobile: 6px;
+            $event-margin-top-bottom-in-tiny-mobile: 20px;
+            $event-margin-in-tiny-mobile: $event-margin-top-bottom-in-tiny-mobile $event-margin-left-right-in-tiny-mobile;
+
+
+
+
+// Newsletter
+$news-letter-color: #fafafa;
+$news-letter-bg-color: #414141;
+$news-letter-padding-top-bottom: 5em;
+$news-letter-padding-left-right: 20px;
+$news-letter-padding: $news-letter-padding-top-bottom $news-letter-padding-left-right;
+
+// News letter Inputs
+$news-letter-border-radius: 3px;
+$news-letter-border-width: 2px;
+    
+    // For large devices
+    $news-letter-input-width: 260px;
+    $news-letter-input-padding: 15px;
+    $news-letter-input-width-on-focus: 300px;
+
+        // For small devices
+        $news-letter-input-width-in-small-device: 85%;
+            
+            // For Tiny devices
+            $news-letter-input-width-in-tiny-device: 90%;
+

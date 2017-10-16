@@ -1,0 +1,104 @@
+.illusion-of-typed-text {
+    position: relative;
+    width: $illusion-of-typing-width;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $illusion-of-typing-bg-color;
+
+    .in-desktop,
+    .in-mobile, {
+        overflow: hidden;
+        white-space: nowrap;
+        font: 700 3.5em "Source Code Pro", monospace;
+        text-transform: capitalize;
+        color: #34495e;
+    }
+}
+
+@keyframes type {
+    from { width: 0; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+// Desktop
+@media screen and (min-width: 1082px) {
+    .illusion-of-typed-text {
+        padding: $illusion-of-typing-padding 0;
+        margin-bottom: $illusion-of-typing-top;
+        top: $illusion-of-typing-top;
+        
+        .in-mobile {
+            display: none;
+        }
+
+        .in-desktop {
+            margin-top: $illusion-of-typing-text-margin-top;
+            display: block;
+            width: 33ch;
+            border-right: 3px solid #333;
+            animation: type 4s steps(33) infinite, blink .5s infinite alternate;
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 760px) and (max-width: 1082px) {
+    .illusion-of-typed-text {
+        margin-bottom: $illusion-of-typing-top-in-tablet;
+        top: $illusion-of-typing-top-in-tablet;
+        padding-top: $illusion-of-typing-padding-in-tablet;
+        
+        .in-desktop {
+            display: block;
+            width: 33ch;
+            border-right: 3px solid #333;
+            font: 600 2.2em "Source Code Pro", monospace;
+            margin: $illusion-of-typing-text-padding-top-in-tablet;
+            animation: type 4s steps(33) infinite, blink .5s infinite alternate;
+        }
+
+        .in-mobile {
+            display: none;
+        }
+    }   
+}
+
+// Mobile
+@media screen and (max-width: 760px) {
+    .illusion-of-typed-text {
+        margin-bottom: $illusion-of-typing-top-in-mobile;
+        top: $illusion-of-typing-top-in-mobile;
+        padding-top: $illusion-of-typing-padding-in-mobile;
+        
+        .in-desktop {
+            display: none;
+        }
+
+        .in-mobile {
+            font: 700 3em "Montserrat", monospace;
+            letter-spacing: 3px;
+            display: block;
+            width: 10ch;
+            border-right: 3px solid #333;
+            margin: $illusion-of-typing-text-padding-top-in-mobile;
+            animation: type 3s steps(10) infinite, blink .5s infinite alternate;
+        }
+    } 
+}
+
+// Tiny Devices
+@media screen and (max-width: 424px) {
+    .illusion-of-typed-text {
+        .in-mobile {
+            font: 700 1em "Montserrat", monospace;
+            width: 16ch;
+            letter-spacing: 6px;
+            animation: type 3s steps(16) infinite, blink .5s infinite alternate;
+        }
+    } 
+}

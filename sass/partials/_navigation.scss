@@ -1,0 +1,148 @@
+.navigation {
+    padding: 0 30px;
+    height: $navigation-height;
+    background-color: $navigation-bg-color;
+    box-shadow: $navigation-box-shadow;
+    z-index: 9999;
+    
+    &__logo,
+    &__menu > li > a {
+        color: $navigation-text-color;
+        text-decoration: none;
+    }
+
+    &__logo,
+    &__menu > li > a,
+    &__menu-toggle, {
+        line-height: $navigation-height;
+    }
+
+    &__logo,
+    &__menu,
+    &__menu > li > a,
+    &__form, {
+        display: block;
+    }
+
+    &__logo,
+    &__menu,
+    &__menu > li, {
+        float: left;
+    }
+
+    &__menu-toggle {
+        float: right;
+    }
+
+    &__logo {
+        font-weight: 700;
+        font-size: 1.2rem;
+        padding: 0 2.6rem;
+        margin: 0 20px;
+    }
+
+    &__menu {
+        list-style-type: none;
+
+        & > li {
+            
+            & > a {
+                position: relative;
+                font-size: .95rem;
+                padding: 0 $navigation-link-padding;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: $navigation-link-underline-height;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $navigation-link-underline-color;
+                    visibility: hidden;
+                    -webkit-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transition: all 0.3s ease-in-out 0s;
+                    transition: all 0.3s ease-in-out 0s;
+                    // position: relative;
+                    // top: (1px - $navigation-link-underline-height);
+                    // left: -(#{$navigation-link-padding/2});
+                    // display: block;
+                    // content: "";
+                    // width: 0%;
+                    // height: $navigation-link-underline-height;
+                    // background-color: $navigation-link-underline-color;
+                }
+
+                &:hover::after {
+                    visibility: visible;
+                    -webkit-transform: scaleX(1);
+                    transform: scaleX(1);
+                    // width: calc(100% + (#{$navigation-link-padding}));
+                    // transition: width 600ms ease-in-out;
+                }
+            }
+        }
+
+        &-toggle {
+            background-color: transparent;
+            padding: 0 22px;
+            color: $navigation-text-color;
+        }
+    }
+}
+
+// breaking poing for navigation
+// menu
+@media screen and (min-width: 634px) {
+    .navigation__menu-toggle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 634px) {
+    .navigation {
+        padding: 0 10px;
+
+        &__menu, {
+            display: none;
+            position: absolute;
+            top: $navigation-height;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            background-color: $navigation-menu-bg-color;
+            box-shadow: inset $navigation-box-shadow, 0 5px 13px rgba(0, 0, 0, .35);
+            z-index: 9999;
+
+            & > li {
+                width: 100%;
+
+                & > a {
+
+                    &:hover { background-color: $navigation-link-bg-color-on-hover; }
+
+                    &::after { background-color: $navigation-link-underline-color-on-hover; }
+                }
+            } 
+
+            &.is-active {
+                display: block;
+                width: $navigation-menu-width;
+                animation: slideInMenu 350ms cubic-bezier(0.39, 0.58, 0.57, 1);
+            }
+
+            &-toggle {
+                display: block;
+            }
+        }
+
+        @keyframes slideInMenu {
+            from { width: 0; }
+
+            70% { width: $navigation-menu-width + 20px; }
+
+            to { width: $navigation-menu-width; }
+        }
+    }   
+}
