@@ -58,8 +58,8 @@ Vue.component('carousel', {
     data: function () {
         return {
             images: [
-                { id: 1, src: '/images/carousel/a-block.jpg', alt: 'A Block', opacity: 1, },
-                { id: 2, src: '/images/carousel/d-block.jpg', alt: 'D Block', opacity: 1, },
+                { id: 1, src: 'images/carousel/a-block.jpg', alt: 'A Block', opacity: 1, },
+                { id: 2, src: 'images/carousel/d-block.jpg', alt: 'D Block', opacity: 1, },
             ],
         };
     },
